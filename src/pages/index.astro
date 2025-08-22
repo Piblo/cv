@@ -1,16 +1,45 @@
 ---
-
+import "../styles/global.css";
+import "@fontsource-variable/inter";
+import Badge from "../components/Badge.astro";
+import TechStack from "../components/TechStack.astro";
+import CurrentRole from "../components/CurrentRole.astro";
+import PreviousExperience from "../components/PreviousExperience.astro";
+import HeadingDecorator from "../components/HeadingDecorator.astro";
+import "@fontsource-variable/geist-mono";
+import "@fontsource-variable/geist";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Pablo Guerrero</title>
+  </head>
+  <body class="max-w-4xl p-4 mx-auto py-8">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">
+        <HeadingDecorator /> Pablo Guerrero
+      </h1>
+      <p class="text-muted">
+        Principal software engineer working at
+        <Badge>
+          <a
+            href="https://www.linkedin.com/company/justgiving"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            JustGiving
+          </a>
+        </Badge>
+      </p>
+    </header>
+    <main>
+      <TechStack class="mb-8" />
+      <CurrentRole class="mb-8" />
+      <PreviousExperience />
+    </main>
+  </body>
 </html>

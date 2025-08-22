@@ -1,0 +1,26 @@
+---
+interface Props {
+  company: string;
+  role: string;
+  startDate: string;
+  endDate?: string;
+}
+---
+
+<div class="flex items-start gap-4 mb-2">
+  <div
+    class="fill-muted p-1 box-content shrink-0 w-[40px] h-[40px] border rounded flex items-center border-neutral-light border-dashed"
+  >
+    <slot name="icon" />
+  </div>
+
+  <div>
+    <h3 class="font-bold">{Astro.props.company} - {Astro.props.role}</h3>
+    <p class="text-muted text-sm mb-2">
+      {Astro.props.startDate} - {Astro.props.endDate ?? <i>Present</i>}
+    </p>
+    <p>
+      <slot />
+    </p>
+  </div>
+</div>

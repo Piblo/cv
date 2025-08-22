@@ -1,0 +1,67 @@
+---
+import HeadingDecorator from "./HeadingDecorator.astro";
+import AwsIcon from "./icons/AwsIcon.astro";
+import CsharpIcon from "./icons/CsharpIcon.astro";
+import GraphQLIcon from "./icons/GraphQLIcon.astro";
+import NextjsIcon from "./icons/NextjsIcon.astro";
+import NodejsIcon from "./icons/NodejsIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
+import TechStackItem from "./TechStackItem.astro";
+
+interface Props {
+  class?: string;
+}
+---
+
+<section class={Astro.props.class}>
+  <h2 class="text-2xl font-bold mb-4">
+    <HeadingDecorator /> Tech stack
+  </h2>
+  <ul
+    class="text-muted grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4"
+  >
+    <li>
+      <TechStackItem>
+        <TypeScriptIcon slot="icon" />
+        TypeScript
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <ReactIcon slot="icon" />
+        React
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <NextjsIcon slot="icon" />
+        Next.js
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <AwsIcon slot="icon" />
+        AWS
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <CsharpIcon slot="icon" />
+        .NET
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <GraphQLIcon slot="icon" />
+        GraphQL
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <NodejsIcon slot="icon" />
+        Node.js
+      </TechStackItem>
+    </li>
+  </ul>
+</section>

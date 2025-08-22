@@ -1,28 +1,43 @@
 @import "tailwindcss";
 
 @theme {
-  --color-muted: var(--color-gray-600);
-  --color-neutral-light: var(--color-gray-400);
   --color-bg: var(--color-gray-100);
   --color-jg: rgba(122, 4, 221, 1);
+  --color-muted: var(--color-gray-600);
+  --color-neutral-light: var(--color-gray-400);
+  --color-text: var(--color-gray-800);
 }
 
-body {
-  /* font-family: "Inter Variable", sans-serif; */
-  font-family: "Geist Variable", sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-gray-800);
-
-  @media print {
-    background-color: white;
+@layer theme {
+  :root,
+  :host {
+    @variant dark {
+      --color-bg: var(--color-zinc-950);
+      --color-muted: var(--color-gray-500);
+      --color-neutral-light: var(--color-gray-700);
+      --color-text: var(--color-gray-300);
+    }
   }
 }
 
-a {
-  text-decoration: underline dotted;
-  text-underline-offset: 2px;
+@layer base {
+  body {
+    /* font-family: "Inter Variable", sans-serif; */
+    font-family: "Geist Variable", sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 
-  &:hover {
-    text-decoration-style: solid;
+    @media print {
+      background-color: white;
+    }
+  }
+
+  a {
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration-style: solid;
+    }
   }
 }

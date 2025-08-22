@@ -9,7 +9,7 @@ interface Props {
 
 <div class="flex items-start gap-4 mb-2">
   <div
-    class="fill-muted p-1 box-content shrink-0 w-[40px] h-[40px] border rounded flex items-center border-neutral-light border-dashed"
+    class="icon-wrapper p-1 box-content shrink-0 w-[40px] h-[40px] border rounded flex items-center border-neutral-light border-dashed"
   >
     <slot name="icon" />
   </div>
@@ -24,3 +24,11 @@ interface Props {
     </p>
   </div>
 </div>
+
+<style>
+  .icon-wrapper {
+    svg {
+      fill: var(--color-muted);
+    }
+  }
+</style>

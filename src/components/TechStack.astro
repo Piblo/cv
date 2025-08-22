@@ -1,6 +1,7 @@
 ---
 import HeadingDecorator from "./HeadingDecorator.astro";
 import AwsIcon from "./icons/AwsIcon.astro";
+import CircleCiIcon from "./icons/CircleCiIcon.astro";
 import CsharpIcon from "./icons/CsharpIcon.astro";
 import GraphQLIcon from "./icons/GraphQLIcon.astro";
 import NextjsIcon from "./icons/NextjsIcon.astro";
@@ -41,8 +42,8 @@ interface Props {
     </li>
     <li>
       <TechStackItem>
-        <AwsIcon slot="icon" />
-        AWS
+        <GraphQLIcon slot="icon" />
+        GraphQL
       </TechStackItem>
     </li>
     <li>
@@ -53,14 +54,20 @@ interface Props {
     </li>
     <li>
       <TechStackItem>
-        <GraphQLIcon slot="icon" />
-        GraphQL
+        <NodejsIcon slot="icon" />
+        Node.js
       </TechStackItem>
     </li>
     <li>
       <TechStackItem>
-        <NodejsIcon slot="icon" />
-        Node.js
+        <AwsIcon slot="icon" />
+        AWS
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <CircleCiIcon slot="icon" />
+        CircleCI
       </TechStackItem>
     </li>
   </ul>

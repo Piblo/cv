@@ -12,10 +12,10 @@
   :root,
   :host {
     @variant dark {
-      --color-bg: var(--color-zinc-950);
+      --color-bg: var(--color-neutral-900);
       --color-muted: var(--color-gray-400);
       --color-neutral-light: var(--color-gray-700);
-      --color-text: var(--color-gray-300);
+      --color-text: var(--color-gray-50);
     }
   }
 }

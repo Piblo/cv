@@ -2,11 +2,15 @@
 import HeadingDecorator from "./HeadingDecorator.astro";
 import AwsIcon from "./icons/AwsIcon.astro";
 import CircleCiIcon from "./icons/CircleCiIcon.astro";
+import CosmosDbIcon from "./icons/CosmosDbIcon.astro";
 import CsharpIcon from "./icons/CsharpIcon.astro";
+import DynamoDbIcon from "./icons/DynamoDbIcon.astro";
 import GraphQLIcon from "./icons/GraphQLIcon.astro";
+import LambdaIcon from "./icons/LambdaIcon.astro";
 import NextjsIcon from "./icons/NextjsIcon.astro";
 import NodejsIcon from "./icons/NodejsIcon.astro";
 import ReactIcon from "./icons/ReactIcon.astro";
+import SqsIcon from "./icons/SqsIcon.astro";
 import TypeScriptIcon from "./icons/TypeScriptIcon.astro";
 import TechStackItem from "./TechStackItem.astro";
 
@@ -62,6 +66,30 @@ interface Props {
       <TechStackItem>
         <AwsIcon slot="icon" />
         AWS
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <DynamoDbIcon slot="icon" />
+        DynamoDB
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <CosmosDbIcon slot="icon" />
+        CosmosDB
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <SqsIcon slot="icon" />
+        SNS/SQS
+      </TechStackItem>
+    </li>
+    <li>
+      <TechStackItem>
+        <LambdaIcon slot="icon" />
+        AWS Lambda
       </TechStackItem>
     </li>
     <li>

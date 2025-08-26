@@ -4,24 +4,34 @@ interface Props {
   role: string;
   startDate: string;
   endDate?: string;
+  technologies?: string;
 }
 ---
 
 <div class="flex items-start gap-4 mb-2">
-  <div
-    class="icon-wrapper p-1 box-content shrink-0 border rounded flex items-center border-neutral-light border-dashed"
-  >
-    <slot name="icon" />
-  </div>
+  {
+    Astro.slots.has("icon") && (
+      <div class="icon-wrapper p-1 box-content shrink-0 border rounded flex items-center border-neutral-light border-dashed">
+        <slot name="icon" />
+      </div>
+    )
+  }
 
   <div>
     <h3 class="font-bold">{Astro.props.company} - {Astro.props.role}</h3>
     <p class="text-muted text-sm mb-2">
       {Astro.props.startDate} - {Astro.props.endDate ?? <i>Present</i>}
     </p>
-    <p>
+    <div>
       <slot />
-    </p>
+    </div>
+    {
+      Astro.props.technologies && (
+        <p class="text-muted text-sm mt-4">
+          <strong>Technologies:</strong> {Astro.props.technologies}
+        </p>
+      )
+    }
   </div>
 </div>
 

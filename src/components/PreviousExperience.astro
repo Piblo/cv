@@ -5,40 +5,74 @@ import KpmgIcon from "./icons/KpmgIcon.astro";
 import JobDetails from "./JobDetails.astro";
 ---
 
-<h2 class="text-2xl font-bold mb-4">
-  <HeadingDecorator /> Previous experience
-</h2>
-<ul class="space-y-6">
-  <li>
-    <JobDetails
-      company="KPMG"
-      role="Lead front end developer"
-      startDate="Nov 2015"
-      endDate="Jul 2019"
-    >
-      <KpmgIcon slot="icon" />
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-      in culpa qui officia deserunt mollit anim id est laborum.</JobDetails
-    >
-  </li>
-  <li>
-    <JobDetails
-      company="IRIS"
-      role="Senior software engineer"
-      startDate="Mar 2013"
-      endDate="Nov 2015"
-    >
-      <IrisIcon slot="icon" />
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-      in culpa qui officia deserunt mollit anim id est laborum.</JobDetails
-    >
-  </li>
-</ul>
+<section {...Astro.props}>
+  <h2 class="text-2xl font-bold mb-4">
+    <HeadingDecorator /> Previous experience
+  </h2>
+  <ul class="space-y-8">
+    <li>
+      <JobDetails
+        company="KPMG"
+        role="Lead front end developer"
+        startDate="Nov 2015"
+        endDate="Jul 2019"
+        technologies="React, Redux, Redux-Saga, D3, Webpack, Jest, Enzyme, Styled-Components, .NET Core, Microservices, AWS, Jenkins, Docker, Identity Server, Entity Framework"
+      >
+        <KpmgIcon slot="icon" />
+        <div class="space-y-4">
+          <p>
+            Worked in a variety of projects for different business areas of the
+            company, involving deal advisory, audit and financial crime
+            technology. Some of these projects are:
+          </p>
+          <ul class="list-disc list-inside space-y-4">
+            <li>
+              Audit Tools Suite: Built custom visualizations with D3 and SVG to
+              support predictive analytics for auditing processes.
+            </li>
+            <li>
+              Sanctions Screening Testing Platform: Applied TDD and conducted
+              design reviews to ensure high-quality financial crime testing
+              tools.
+            </li>
+            <li>
+              DealTech: Developed a high-load, microservices-based platform for
+              deal advisory, with shared authentication, queues, and
+              notifications.
+            </li>
+          </ul>
+
+          <p>
+            Key responsibilities included technical delivery, front-end and
+            back-end architecture, CI/CD setup, team mentoring, and recruitment
+            support.
+          </p>
+        </div>
+      </JobDetails>
+    </li>
+    <li>
+      <JobDetails
+        company="IRIS"
+        role="Senior software engineer"
+        startDate="Mar 2013"
+        endDate="Nov 2015"
+        technologies="Knockout, Bootstrap, SASS, jQuery, jQueryUI, Azure, ASP .NET MVC 4, Ninject, Entity Framework, SQL Server"
+      >
+        <IrisIcon slot="icon" />
+        <div class="space-y-4">
+          <p>
+            Contributed to the design and development of payroll web
+            applications (Kashflow Payroll, IRIS OpenPayslips). Key achievements
+            include delivering the highly-acclaimed automatic enrolment module,
+            improving application performance, and modernizing the front-end
+            codebase by migrating CSS to SASS
+          </p>
+
+          <i class="text-muted text-sm"
+            >Awarded Employee of the Month, Jan 2015</i
+          >
+        </div>
+      </JobDetails>
+    </li>
+  </ul>
+</section>

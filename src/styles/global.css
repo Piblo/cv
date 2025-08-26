@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: var(--color-gray-100);
+  --color-bg: var(--color-orange-50);
   --color-jg: rgba(122, 4, 221, 1);
   --color-muted: var(--color-gray-600);
   --color-neutral-light: var(--color-gray-400);
@@ -13,7 +13,7 @@
   :host {
     @variant dark {
       --color-bg: var(--color-zinc-950);
-      --color-muted: var(--color-gray-500);
+      --color-muted: var(--color-gray-400);
       --color-neutral-light: var(--color-gray-700);
       --color-text: var(--color-gray-300);
     }
@@ -21,8 +21,13 @@
 }
 
 @layer base {
+  html {
+    @media print {
+      font-size: 8pt;
+    }
+  }
+
   body {
-    /* font-family: "Inter Variable", sans-serif; */
     font-family: "Geist Variable", sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);

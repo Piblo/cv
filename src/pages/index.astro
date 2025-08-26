@@ -1,13 +1,11 @@
 ---
 import "../styles/global.css";
-import "@fontsource-variable/inter";
-import Badge from "../components/Badge.astro";
 import TechStack from "../components/TechStack.astro";
 import CurrentRole from "../components/CurrentRole.astro";
 import PreviousExperience from "../components/PreviousExperience.astro";
 import HeadingDecorator from "../components/HeadingDecorator.astro";
-import "@fontsource-variable/geist-mono";
 import "@fontsource-variable/geist";
+import Education from "../components/Education.astro";
 ---
 
 <html lang="en">
@@ -16,7 +14,7 @@ import "@fontsource-variable/geist";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Pablo Guerrero</title>
+    <title>Pablo Guerrero - CV</title>
   </head>
   <body class="max-w-4xl p-4 mx-auto py-8">
     <header class="mb-8">
@@ -25,21 +23,20 @@ import "@fontsource-variable/geist";
       </h1>
       <p class="text-muted">
         Principal software engineer working at
-        <Badge>
-          <a
-            href="https://www.linkedin.com/company/justgiving"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            JustGiving
-          </a>
-        </Badge>
+        <a
+          href="https://www.linkedin.com/company/justgiving"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          JustGiving
+        </a>
       </p>
     </header>
     <main>
       <TechStack class="mb-8" />
       <CurrentRole class="mb-8" />
-      <PreviousExperience />
+      <PreviousExperience class="mb-8" />
+      <Education class="mb-8" />
     </main>
   </body>
 </html>

@@ -1,0 +1,28 @@
+---
+import EmailIcon from "./icons/EmailIcon.astro";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+---
+
+<footer {...Astro.props}>
+  <div class="flex flex-col md:flex-row justify-around items-center gap-4">
+    <a href="mailto:pablo.gocv@gmail.com" class="flex items-center gap-2"
+      ><EmailIcon class="size-5" />pablo.gocv@gmail.com</a
+    >
+    <a
+      href="https://github.com/piblo"
+      target="_blank"
+      class="flex items-center gap-2"
+      ><GitHubIcon class="size-5" fill="white" />github.com/piblo</a
+    >
+    <a
+      href="https://linkedin.com/in/pablo-guerrero-dev"
+      target="_blank"
+      class="flex items-center gap-2"
+      ><LinkedInIcon
+        class="size-5"
+        fill="white"
+      />linkedin.com/in/pablo-guerrero-dev</a
+    >
+  </div>
+</footer>

@@ -6,6 +6,7 @@ import PreviousExperience from "../components/PreviousExperience.astro";
 import HeadingDecorator from "../components/HeadingDecorator.astro";
 import "@fontsource-variable/geist";
 import Education from "../components/Education.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <html lang="en">
@@ -16,8 +17,8 @@ import Education from "../components/Education.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Pablo Guerrero - CV</title>
   </head>
-  <body class="max-w-4xl p-4 mx-auto py-8">
-    <header class="mb-8">
+  <body class="max-w-4xl p-4 mx-auto py-14">
+    <header class="mb-12">
       <h1 class="text-4xl font-bold mb-4">
         <HeadingDecorator /> Pablo Guerrero
       </h1>
@@ -30,10 +31,12 @@ import Education from "../components/Education.astro";
       </p>
     </header>
     <main>
-      <TechStack class="mb-8" />
-      <CurrentRole class="mb-8" />
-      <PreviousExperience class="mb-8" />
-      <Education class="mb-8" />
+      <TechStack class="mb-10" />
+      <CurrentRole class="mb-10" />
+      <PreviousExperience class="mb-10" />
+      <Education class="mb-12" />
+      <hr class="w-2xs md:w-sm mx-auto mb-12 border-neutral-light" />
+      <Contact class="mb-12" />
     </main>
   </body>
 </html>

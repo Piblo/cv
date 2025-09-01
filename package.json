@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "pdfgen": "tsx src/scripts/generate-pdf.ts"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.6",
@@ -15,5 +16,11 @@
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.2",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "tree-kill": "^1.2.2",
+    "tsx": "^4.20.5"
   }
 }
